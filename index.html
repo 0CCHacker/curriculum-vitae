@@ -1,137 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huỳnh Chí Tài - CV</title>
+    <title>Huỳnh Chí Tài - Aspiring Software Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .section {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        .section-title {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .card-content {
+            flex-grow: 1;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="text-slate-800">
 
-    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
-        
-        <!-- Main CV Container -->
-        <div class="bg-white rounded-lg shadow-xl overflow-hidden">
-            <div class="md:flex">
-                <!-- Left Column (Sidebar) -->
-                <aside class="w-full md:w-1/3 bg-gray-800 text-white p-8">
-                    <div class="text-center md:text-left">
-                        <h1 class="text-3xl font-bold text-white">Huỳnh Chí Tài</h1>
-                        <p class="text-lg text-blue-300 mt-1">Aspiring Software Developer</p>
-                    </div>
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-slate-900">Huỳnh Chí Tài</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-slate-600 hover:text-indigo-600 transition">About</a>
+                <a href="#projects" class="text-slate-600 hover:text-indigo-600 transition">Projects</a>
+                <a href="#certifications" class="text-slate-600 hover:text-indigo-600 transition">Certifications</a>
+                <a href="#contact" class="text-slate-600 hover:text-indigo-600 transition">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+             <a href="#about" class="block text-slate-600 hover:text-indigo-600 transition">About</a>
+             <a href="#projects" class="block text-slate-600 hover:text-indigo-600 transition">Projects</a>
+             <a href="#certifications" class="block text-slate-600 hover:text-indigo-600 transition">Certifications</a>
+             <a href="#contact" class="block text-slate-600 hover:text-indigo-600 transition">Contact</a>
+        </div>
+    </header>
 
-                    <!-- Contact Section -->
-                    <section class="mt-8">
-                        <h2 class="text-xl font-semibold border-b-2 border-blue-400 pb-2">Contact</h2>
-                        <ul class="mt-4 space-y-3">
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-blue-300" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
-                                <a href="mailto:huynhchitai.070306@gmail.com" class="text-gray-300 hover:text-white break-all">huynhchitai.070306@gmail.com</a>
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-blue-300" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.338 16.338H3.662a1.662 1.662 0 01-1.662-1.662V3.662A1.662 1.662 0 013.662 2h12.676A1.662 1.662 0 0118 3.662v11.014a1.662 1.662 0 01-1.662 1.662zM5.338 5.338v8h1.333v-8H5.338zm2.667 8V8.67c0-1.11.008-2.522 1.533-2.522 1.533 0 1.77 1.196 1.77 2.44v5.412h1.334V8.5c0-2.84-1.52-4.167-3.6-4.167-1.74 0-2.6.9-3.033 1.733H6.67V5.338H5.338v8h1.333z" clip-rule="evenodd" /></svg>
-                                <a href="https://www.linkedin.com/in/tài-huỳnh-79954a321/" target="_blank" class="text-gray-300 hover:text-white">LinkedIn Profile</a>
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-blue-300" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0020 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
-                                <a href="https://github.com/0CCHacker" target="_blank" class="text-gray-300 hover:text-white">GitHub Profile</a>
-                            </li>
-                            <!-- LeetCode Link -->
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-blue-300" viewBox="0 0 24 24" fill="currentColor"><path d="M13.48 4.49l-3.48 3.48-2.49-2.49-3.51 3.51 2.5 2.5-3.48 3.48 3.51 3.51 3.48-3.48 2.49 2.49 3.51-3.51-2.5-2.5 3.48-3.48-3.51-3.51zM8 12.01l-2.5-2.5 1.51-1.51L9.5 10.5l2.48-2.48 1.49 1.49-2.48 2.48 2.5 2.5-1.51 1.51-2.5-2.5-2.48 2.48-1.49-1.49z"/></svg>
-                                <a href="https://leetcode.com/u/UnordinaryGambler/" target="_blank" class="text-gray-300 hover:text-white">LeetCode Profile</a>
-                            </li>
-                        </ul>
-                    </section>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <img src="https://placehold.co/160x160/e2e8f0/475569?text=HCT" alt="Profile Picture" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-slate-200 shadow-lg">
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-4">Huỳnh Chí Tài</h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                    Aspiring Software Developer | Year 2 NTU Electrical Engineering student with a major in Data Analytics. Passionate about building efficient, user-centric applications.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#projects" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition shadow-lg">View My Work</a>
+                    <a href="#" class="bg-slate-200 text-slate-800 font-semibold px-8 py-3 rounded-lg hover:bg-slate-300 transition shadow-lg">Download Resume</a>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Skills Section -->
-                    <section class="mt-8">
-                        <h2 class="text-xl font-semibold border-b-2 border-blue-400 pb-2">Skills</h2>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="bg-blue-200 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Flutter</span>
-                            <span class="bg-green-200 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">SQL</span>
-                            <span class="bg-blue-200 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">C/C++</span>
-                            <span class="bg-green-200 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Python</span>
-                            <span class="bg-orange-200 text-orange-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Problem Solving</span>
-                            <span class="bg-yellow-200 text-yellow-800 text-sm font-medium px-2.5 py-0.5 rounded-full">HTML/CSS</span>
-                            <span class="bg-pink-200 text-pink-800 text-sm font-medium px-2.5 py-0.5 rounded-full">JavaScript</span>
-                            <span class="bg-gray-200 text-gray-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Git & GitHub</span>
-                        </div>
-                    </section>
-
-                    <!-- Education Section -->
-                    <section class="mt-8">
-                        <h2 class="text-xl font-semibold border-b-2 border-blue-400 pb-2">Education</h2>
-                        <div class="mt-4">
-                            <h3 class="font-bold text-lg">B.Eng Electrical & Electronic Engineering</h3>
-                            <p class="font-medium text-blue-200">2nd Major in Data Analytics</p>
-                            <p class="text-gray-300">Nanyang Technological University</p>
-                            <p class="text-sm text-gray-400">Year 2 Student | Expected Graduation: 2028</p>
-                        </div>
-                    </section>
-                </aside>
-
-                <!-- Right Column (Main Content) -->
-                <main class="w-full md:w-2/3 p-8">
-                    <!-- Profile/Objective Section -->
-                    <section class="mb-8">
-                        <h2 class="text-2xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Profile</h2>
-                        <p class="text-gray-700">
-                            A highly motivated Year 2 NTU student pursuing a degree in Electrical & Electronic Engineering with a second major in Data Analytics. Passionate about software development, particularly with Flutter and SQL. Seeking to leverage technical skills and a strong academic foundation to contribute to a dynamic IT team. Eager to build and maintain websites, design new tools, and support technical infrastructure.
+        <!-- About Me & Skills Section -->
+        <section id="about" class="section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">About Me</h2>
+                <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-3 text-slate-600 text-lg leading-relaxed">
+                        <p class="mb-4">
+                           A highly motivated Year 2 NTU student pursuing a degree in Electrical & Electronic Engineering with a second major in Data Analytics. I'm passionate about software development, particularly with Flutter and SQL. 
                         </p>
-                    </section>
-                    
-                    <!-- Problem Solving Section -->
-                    <section class="mb-8">
-                        <h2 class="text-2xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Problem Solving</h2>
-                        <div>
-                            <h3 class="text-xl font-semibold">LeetCode</h3>
-                            <p class="text-sm text-gray-500 mb-2">Profile: <a href="https://leetcode.com/u/UnordinaryGambler/" target="_blank" class="text-blue-500 hover:underline">UnordinaryGambler</a></p>
-                            <ul class="list-disc list-inside text-gray-700 space-y-1">
-                                <!-- IMPORTANT: Update these numbers with your stats -->
-                                <li>Solved 100+ problems (e.g., 30 Easy, 60 Medium, 10 Hard).</li>
-                            </ul>
-                        </div>
-                    </section>
-                    
-                    <!-- Coursework & Achievements -->
-                    <section class="mb-8">
-                        <h2 class="text-2xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Relevant Coursework</h2>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1">
-                            <li><b>IE2108</b> Data Structures & Algorithms in Python - <span class="font-semibold text-green-600">Grade: A+</span></li>
-                            <li><b>IE0005</b> Introduction to Data Science & AI - <span class="font-semibold text-green-600">Grade: A-</span></li>
-                            <li><b>IE1005</b> From Computational Thinking to Programming (C) - <span class="font-semibold text-green-600">Grade: A+</span></li>
-                        </ul>
-                    </section>
-
-                    <!-- Certifications Section -->
-                    <section>
-                        <h2 class="text-2xl font-bold border-b-2 border-gray-300 pb-2 mb-4">Certifications</h2>
-                         <div class="space-y-6">
-                            <div>
-                                <h3 class="text-xl font-semibold">Applied Social Network Analysis in Python</h3>
-                                <p class="text-sm text-gray-500 mb-2">Provider: University of Michigan (via Coursera)</p>
-                                <p class="text-gray-700 font-medium">Achieved a perfect score of 100%.</p>
-                                <!-- Add the certificate link here when you have it -->
-                                <a href="https://coursera.org/share/57b6ce0fe98dd8568383e393f0df84a5" target="_blank" class="text-blue-500 hover:underline font-medium mt-1 inline-block">View Certificate &rarr;</a>
+                        <p class="mb-4">
+                           I'm seeking to leverage my technical skills and strong academic foundation to contribute to a dynamic IT team. I'm eager to build and maintain websites, design new tools, and support technical infrastructure. My coursework in Data Structures, AI, and Computational Thinking has provided me with a solid foundation in solving complex problems.
+                        </p>
+                        <p>
+                            When I'm not coding, I enjoy walking. I'm currently seeking internship opportunities where I can contribute to a dynamic team and grow as a developer.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="card p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-center">My Tech Stack</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold text-slate-700 mb-2">Languages</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                                        <span class="bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium">C/C++</span>
+                                        <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">SQL</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-700 mb-2">Frameworks & Libraries</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Flutter</span>
+                                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">HTML/CSS</span>
+                                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-medium">FastAPI</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-700 mb-2">Tools & Technologies</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Git & GitHub</span>
+                                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">LeetCode</span>
+                                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Excel</span>
+                                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Supabase</span>
+                                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">AI/ML</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </section>
-                </main>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <!-- Footer -->
-        <footer class="text-center mt-6 text-gray-500 text-sm">
-            <p>&copy; 2025 Huỳnh Chí Tài. Hosted on GitHub Pages.</p>
-        </footer>
-    </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Projects</h2>
+                <p class="text-center text-slate-600 max-w-2xl mx-auto -mt-6 mb-12">Here are a few projects I've worked on. Feel free to explore the code and see them in action.</p>
+                
+                <!-- Project Cards Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project Card - Dynamic Sales Dashboard -->
+                    <div class="card overflow-hidden">
+                        <img src="https://placehold.co/600x400/dcfce7/166534?text=Sales+Dashboard" alt="Sales Dashboard Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold mb-2">Dynamic Sales Dashboard</h3>
+                            <p class="text-slate-600 mb-4">An interactive sales dashboard built in Excel as part of an online course, demonstrating data visualization skills with dynamic charts and slicers.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">Excel</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Data Visualization</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="flex space-x-4">
+                                <a href="https://drive.google.com/drive/folders/1kQNlNJHnZWG4m0I_buYcrJKjS9Uv06F5?usp=sharing" target="_blank" class="flex items-center text-indigo-600 hover:text-indigo-800 font-semibold">
+                                    <i data-feather="external-link" class="w-4 h-4 mr-2"></i> View on Drive
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card - AI Budget Manager -->
+                    <div class="card overflow-hidden">
+                        <img src="https://placehold.co/600x400/cceeff/0077cc?text=Budget+App" alt="AI Budget Manager Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold mb-2">AI-Powered Budget Manager</h3>
+                            <p class="text-slate-600 mb-4">A smart personal finance app that features AI-powered bill scanning to automatically add expenses, helping users track spending with insightful data visualizations.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-semibold">Python</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Flutter</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs font-semibold">Data Visualization</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold">AI/ML</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <div class="flex space-x-4">
+                                <a href="https://drive.google.com/file/d/1JxSMtAe_kSo2PyTCyZwVD464EGvfQd4K/view?usp=drive_link" target="_blank" class="flex items-center text-indigo-600 hover:text-indigo-800 font-semibold">
+                                    <i data-feather="video" class="w-4 h-4 mr-2"></i> View Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Certifications</h2>
+                <div class="max-w-3xl mx-auto flex flex-col gap-8">
+                    
+                    <!-- Google Certifications Card -->
+                    <div class="card p-8">
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold mb-2">Google Advanced Data Analytics</h3>
+                            <p class="text-slate-500 mb-4">Provider: Google (via Coursera)</p>
+                            <p class="text-lg text-slate-700 mb-4">Completed several courses as part of the Professional Certificate, building skills in data science foundations, Python, and data-driven insights.</p>
+                            <ul class="space-y-3">
+                                <li><a href="https://www.coursera.org/account/accomplishments/verify/3XROYT9KT7SS" target="_blank" class="flex items-center text-indigo-600 hover:text-indigo-800 font-semibold"><i data-feather="award" class="w-4 h-4 mr-2"></i>Foundations of Data Science</a></li>
+                                <li><a href="https://www.coursera.org/account/accomplishments/verify/TS1DFDEAL3K5" target="_blank" class="flex items-center text-indigo-600 hover:text-indigo-800 font-semibold"><i data-feather="award" class="w-4 h-4 mr-2"></i>Get Started with Python</a></li>
+                                <li><a href="https://www.coursera.org/account/accomplishments/verify/QAPNUJRJHNNC" target="_blank" class="flex items-center text-indigo-600 hover:text-indigo-800 font-semibold"><i data-feather="award" class="w-4 h-4 mr-2"></i>Go Beyond the Numbers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- University of Michigan Certification Card -->
+                    <div class="card p-8">
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold mb-2">Applied Social Network Analysis in Python</h3>
+                            <p class="text-slate-500 mb-3">Provider: University of Michigan (via Coursera)</p>
+                            <p class="text-lg text-slate-700 mb-4">Achieved a perfect score of 100%, demonstrating a strong grasp of network analysis concepts and their application in Python.</p>
+                        </div>
+                        <div class="pt-4">
+                             <a href="https://coursera.org/share/57b6ce0fe98dd8568383e393f0df84a5" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold">
+                                View Certificate <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+                    I'm currently looking for internship opportunities and am open to new challenges. Whether you have a question or just want to say hi, feel free to reach out!
+                </p>
+                <a href="mailto:huynhchitai.070306@gmail.com" class="bg-indigo-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-indigo-700 transition inline-block text-lg shadow-lg">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/0CCHacker" target="_blank" class="hover:text-white transition"><i data-feather="github"></i></a>
+                <a href="https://www.linkedin.com/in/tài-huỳnh-79954a321/" target="_blank" class="hover:text-white transition"><i data-feather="linkedin"></i></a>
+                <a href="https://leetcode.com/u/UnordinaryGambler/" target="_blank" class="hover:text-white transition"><i data-feather="code"></i></a> <!-- Changed icon to 'code' for LeetCode -->
+            </div>
+            <p>&copy; 2024 Huỳnh Chí Tài. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Feather Icons
+        feather.replace();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
